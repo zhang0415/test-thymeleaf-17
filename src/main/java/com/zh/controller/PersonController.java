@@ -10,12 +10,11 @@ import org.springframework.web.servlet.ModelAndView;
 public class PersonController {
 
     @RequestMapping("/")
-    public String test(Model model){
-//        ModelAndView mv = new ModelAndView();
+    public ModelAndView test(){
+        ModelAndView mv = new ModelAndView();
         Person person = new Person("张三","12");
-//        mv.setViewName("templates/welcome.html");
-//        mv.addObject("person",person);
-        model.addAttribute("person",person);
-        return "welcome";
+        mv.setViewName("welcome");
+        mv.addObject("person",person);
+        return mv;
     }
 }
