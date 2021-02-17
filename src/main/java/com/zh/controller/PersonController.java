@@ -6,12 +6,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
 import java.util.ArrayList;
-import java.util.List;
 
 @Controller
 public class PersonController {
 
-    @RequestMapping("/")
+    @RequestMapping("/toWelcome")
     public ModelAndView test(){
         ModelAndView mv = new ModelAndView();
         Person person = new Person("张三","12");

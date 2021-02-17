@@ -6,5 +6,47 @@
 </head>
 <body>
     <p th:text="${person.name}+ '  ' +${person.age} ">名字</p>
+
+    <p th:text="${mes}" th:unless="${mes=='zh'}"></p>
+
+
+    <div th:switch="${num}">
+        <p th:case="1"> 1 </p>
+        <p th:case="2"> 2 </p>
+        <p th:case="*"> * </p>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th>角色</th>
+                <th>年龄</th>
+                <th>index</th>
+                <th>size</th>
+                <th>count</th>
+                <th>current</th>
+                <th>first</th>
+                <th>last</th>
+                <th>even</th>
+                <th>odd</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="person:${list}">
+                <td th:text="${person.name}"></td>
+                <td th:text="${person.age}"></td>
+                <td th:text="${personStat.index}">index</td>
+                <td th:text="${personStat.size}">size</td>
+                <td th:text="${personStat.count}">count</td>
+                <td th:text="${personStat.current}">current</td>
+                <td th:text="${personStat.first}">first</td>
+                <td th:text="${personStat.last}">last</td>
+                <td th:text="${personStat.even}">even</td>
+                <td th:text="${personStat.odd}">odd</td>
+
+
+            </tr>
+        </tbody>
+    </table>
+
 </body>
 </html>
