@@ -14,6 +14,7 @@ public class PersonController {
         Person person = new Person("张三","12");
         mv.setViewName("welcome");
         mv.addObject("person",person);
+        System.out.println("测试成功");
         return mv;
     }
 }
